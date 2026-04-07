@@ -1,61 +1,159 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Buying Dashboard | Q3 2026</title>
+    <title>Sophie Lahlou | Expert Freelance Media Buyer & Planner | Q3 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf9',
+                            100: '#ccfbf1',
+                            500: '#14b8a6', // Teal vibrant pour le Media Buying
+                            600: '#0d9488',
+                            700: '#0f766e',
+                        },
+                        accent: {
+                            500: '#f59e0b', // Ambre doré pour la conversion
+                            600: '#d97706',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Animation subtile pour les éléments au survol */
+        .hover-lift { transition: transform 0.2s ease-in-out; }
+        .hover-lift:hover { transform: translateY(-4px); }
+    </style>
 </head>
-<body class="bg-slate-50 font-sans flex h-screen overflow-hidden">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
 
-    <aside class="w-64 bg-slate-900 text-white flex flex-col hidden md:flex">
-        <div class="p-6 flex items-center space-x-3 border-b border-slate-800">
-            <div class="bg-blue-600 p-2 rounded-lg"><i data-lucide="target" class="w-5 h-5"></i></div>
-            <span class="font-bold text-xl">MediaPlanner</span>
+    <section class="bg-brand-700 text-white overflow-hidden relative">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+
+        <div class="container mx-auto px-6 py-20 md:py-32 relative z-10 flex flex-col md:flex-row items-center gap-12 max-w-7xl">
+            
+            <div class="md:w-3/5 space-y-6 text-center md:text-left">
+                <span class="inline-block bg-brand-600/50 border border-brand-500 text-brand-100 px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-2">
+                    Media Buying & Planning Senior
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                    Ne dépensez plus.<br>
+                    <span class="text-accent-500">Investissez stratégiquement.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-brand-50/90 font-light max-w-2xl mx-auto md:mx-0 leading-relaxed">
+                    Sophie Lahlou accompagne les entreprises ambitieuses dans l’acquisition de leads qualifiés et la maximisation de leur ROAS à travers une ingénierie média multicanale rigoureuse.
+                </p>
+
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start pt-6">
+                    <a href="#services" class="bg-accent-500 text-brand-700 px-8 py-4 rounded-xl hover:bg-accent-600 transition font-bold shadow-lg shadow-accent-500/20 text-center">
+                        Optimiser mes campagnes
+                    </a>
+                    <a href="#" class="bg-white border-2 border-brand-500 text-brand-600 px-8 py-4 rounded-xl hover:bg-brand-50 transition font-bold text-center flex items-center gap-2 justify-center">
+                        <i data-lucide="download" class="w-5 h-5"></i> Mon Portfolio Média
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-2/5 flex justify-center items-center">
+                <div class="bg-white p-2 rounded-3xl shadow-2xl relative hover-lift">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop" 
+                         alt="Sophie Lahlou - Expert Media Buying" 
+                         class="rounded-2xl w-full h-96 object-cover aspect-auto">
+                    <div class="absolute -top-6 -right-6 bg-brand-500 text-white text-sm font-black px-5 py-2 rounded-full shadow-lg border-4 border-white rotate-12">
+                        +8 Ans d'Expertise
+                    </div>
+                </div>
+            </div>
         </div>
-        <nav class="flex-1 p-4 space-y-2 mt-4 text-slate-400">
-            <div class="flex items-center space-x-3 px-4 py-3 bg-blue-600 text-white rounded-lg">
-                <i data-lucide="layout-dashboard"></i><span>Dashboard</span>
-            </div>
-            <div class="flex items-center space-x-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg cursor-pointer transition">
-                <i data-lucide="calendar-days"></i><span>Planning</span>
-            </div>
-            <div class="flex items-center space-x-3 px-4 py-3 hover:bg-slate-800 hover:text-white rounded-lg cursor-pointer transition">
-                <i data-lucide="shopping-cart"></i><span>Achat Média</span>
-            </div>
-        </nav>
-        <div class="p-4 border-t border-slate-800 text-sm text-slate-500">v1.2.0 - 2026</div>
-    </aside>
+    </section>
 
-    <main class="flex-1 overflow-y-auto">
-        <header class="bg-white border-b border-slate-200 px-8 py-4 flex justify-between items-center sticky top-0 z-10">
-            <h1 class="text-xl font-bold text-slate-800">Vue d'ensemble du Q3</h1>
-            <div class="flex items-center space-x-4">
-                <div class="text-right hidden sm:block">
-                    <p class="text-sm font-bold text-slate-700">Sophie Lahlou</p>
-                    <p class="text-xs text-slate-500 text-emerald-600 font-medium">Media Buyer Senior</p>
-                </div>
-                <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center font-bold text-blue-700">SL</div>
+    <section class="container mx-auto px-6 -mt-12 relative z-20 max-w-6xl">
+        <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex flex-col items-center p-6 border-b md:border-b-0 md:border-r border-gray-100 last:border-0 hover-lift">
+                <span class="text-5xl font-black text-brand-600 leading-none mb-2">+150 M€</span>
+                <span class="text-sm text-gray-500 font-medium tracking-wide">De budget géré (Cumulé)</span>
             </div>
-        </header>
+            <div class="flex flex-col items-center p-6 border-b md:border-b-0 md:border-r border-gray-100 hover-lift">
+                <span class="text-5xl font-black text-brand-600 leading-none mb-2">4.2 ROAS</span>
+                <span class="text-sm text-gray-500 font-medium tracking-wide">Moyen sur Q3 2026</span>
+            </div>
+            <div class="flex flex-col items-center p-6 hover-lift">
+                <span class="text-5xl font-black text-brand-600 leading-none mb-2">12 Canaux</span>
+                <span class="text-sm text-gray-500 font-medium tracking-wide">Média pilotés</span>
+            </div>
+        </div>
+    </section>
 
-        <div class="p-8 max-w-7xl mx-auto space-y-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
-                    <div class="p-3 bg-blue-50 text-blue-600 rounded-lg"><i data-lucide="wallet"></i></div>
-                    <div><p class="text-xs text-slate-500 uppercase font-bold">Budget Planifié</p><p class="text-2xl font-black">485 000 €</p></div>
+    <section id="services" class="container mx-auto px-6 py-24 max-w-7xl">
+        <div class="text-center max-w-2xl mx-auto mb-20 space-y-4">
+            <span class="text-brand-700 font-semibold uppercase tracking-wider text-sm flex items-center gap-2 justify-center">
+                <i data-lucide="settings" class="w-4 h-4"></i> Ingénierie Média Complète
+            </span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">
+                Le pilotage au service de <br> votre acquisition.
+            </h2>
+            <p class="text-gray-600 text-lg leading-relaxed">
+                De la stratégie initiale à l'arbitrage final, j'optimise chaque étape de votre tunnel de conversion pour garantir la rentabilité de vos investissements publicitaires.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover-lift transition flex flex-col items-start gap-6 h-full">
+                <div class="w-14 h-14 bg-brand-50 text-brand-600 rounded-2xl flex items-center justify-center">
+                    <i data-lucide="calendar-days" class="w-7 h-7"></i>
                 </div>
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
-                    <div class="p-3 bg-purple-50 text-purple-600 rounded-lg"><i data-lucide="trending-up"></i></div>
-                    <div><p class="text-xs text-slate-500 uppercase font-bold">Dépenses Réelles</p><p class="text-2xl font-black">206 500 €</p></div>
-                </div>
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
-                    <div class="p-3 bg-green-50 text-green-600 rounded-lg"><i data-lucide="users"></i></div>
-                    <div><p class="text-xs text-slate-500 uppercase font-bold">Reach Total</p><p class="text-2xl font-black">4.2M</p></div>
-                </div>
-                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-100 flex items-center space-x-4">
-                    <div class="p-3 bg-orange-50 text-orange-600 rounded-lg"><i data-lucide="bar-chart-3"></i></div>
-                    <div><p class="text-xs text-slate-500 uppercase font-bold">ROI Moyen</p><p class="text-2xl font-black text-green-600">+18%</p></div>
+                <h3 class="text-2xl font-bold text-gray-900">Média Planning Stratégique</h3>
+                <p class="text-gray-600 text-base leading-relaxed flex-grow">
+                    Identification des meilleurs canaux (TV, Digital, Presse), définition des GRP/CPM cibles et allocation budgétaire optimale pour atteindre vos objectifs d'audience au meilleur coût.
+                </p>
+                <div class="flex items-center space-x-2 text-sm text-brand-700 font-medium mt-auto">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-500"></i>
+                    <span>Arbitrage multicanal neutre</span>
                 </div>
             </div>
+
+            <div class="bg-white p-8 rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover-lift transition flex flex-col items-start gap-6 h-full">
+                <div class="w-14 h-14 bg-accent-50 text-accent-600 rounded-2xl flex items-center justify-center">
+                    <i data-lucide="shopping-cart" class="w-7 h-7"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900">Achat Média & Trafic</h3>
+                <p class="text-gray-600 text-base leading-relaxed flex-grow">
+                    Négociation, paramétrage et pilotage quotidien de vos campagnes (Programatique, Social Ads, Search, Retail Média) pour maximiser le volume de leads qualifiés.
+                </p>
+                <div class="flex items-center space-x-2 text-sm text-accent-700 font-medium mt-auto">
+                    <i data-lucide="zap" class="w-5 h-5 text-accent-500"></i>
+                    <span>Optimisation ROAS en temps réel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-700 text-white py-20 text-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="container mx-auto px-6 max-w-3xl space-y-6 relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold leading-tight">Prêt à dominer votre marché ?</h2>
+            <p class="text-brand-100 text-lg font-light leading-relaxed">Offrez-vous la tranquillité d'esprit en confiant le pilotage de votre budget média à un expert indépendant focalisé sur la performance.</p>
+            <div class="pt-6">
+                <a href="#" class="bg-accent-500 text-brand-700 px-8 py-4 rounded-xl hover:bg-accent-600 transition font-bold shadow-lg shadow-accent-500/20 text-center text-lg">
+                    Lancer l'entretien de stratégie
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+        
