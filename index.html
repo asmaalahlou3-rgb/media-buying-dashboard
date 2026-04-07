@@ -3,99 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Malika Bennani | Expertise Média Haute Précision</title>
+    <title>Malika Bennani | Expertise Média de Haute Précision | Q3 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#fdfcf0',
+                            300: '#f9f295',
+                            500: '#d4af37', // Or professionnel
+                            600: '#b8860b',
+                            700: '#996e00',
+                        },
+                        dark: {
+                            800: '#1a1a1a',
+                            900: '#0a0a0a',
+                            950: '#050505', // Fond d'écran
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        luxury: ['Playfair Display', 'serif'], // Pour une touche de luxe
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600;700;800&display=swap');
         
-        body { font-family: 'Inter', sans-serif; background-color: #050505; }
-        .font-luxury { font-family: 'Playfair Display', serif; }
-        
-        .gold-gradient {
-            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+        body { font-family: 'Inter', sans-serif; background-color: #050505; color: #d4af37; }
+        .font-luxury { font-family: 'Playfair Display', serif; color: white; }
+
+        /* Effets de dégradé doré réalistes */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 70%, #fbf5b7 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        
-        .bg-gold {
-            background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728);
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 45%, #b38728 70%, #fbf5b7 100%);
+        }
+
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.4);
+        }
+
+        .gold-border:hover {
+            border: 1px solid rgba(212, 175, 55, 1);
         }
 
         .card-dark {
-            background: rgba(20, 20, 20, 0.8);
-            border: 1px solid rgba(191, 149, 63, 0.3);
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(212, 175, 55, 0.2);
             backdrop-filter: blur(10px);
         }
 
-        .gold-border-button {
-            border: 1px solid #bf953f;
-            transition: all 0.3s ease;
-        }
-
-        .gold-border-button:hover {
-            background: #bf953f;
-            color: #000;
-        }
+        /* Animation pour l'effet de survol */
+        .hover-lift { transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; }
+        .hover-lift:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.1); }
     </style>
 </head>
-<body class="text-gray-300 antialiased">
+<body class="antialiased overflow-x-hidden">
 
-    <nav class="container mx-auto px-8 py-6 flex justify-between items-center border-b border-white/10 sticky top-0 bg-[#050505]/90 z-50 backdrop-blur-md">
-        <div class="text-2xl font-bold tracking-tighter text-white uppercase">
-            Malika <span class="gold-gradient italic">Bennani</span>
+    <nav class="container mx-auto px-8 py-6 flex justify-between items-center border-b border-gold/10 sticky top-0 bg-dark-950/90 z-50 backdrop-blur-md">
+        <div class="text-xl font-extrabold tracking-tighter text-white">
+            MALIKA <span class="gold-gradient-text italic font-luxury">BENNANI</span>
         </div>
-        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-bold">
-            <a href="#expertise" class="hover:text-white transition">Expertise</a>
-            <a href="#resultats" class="hover:text-white transition">Résultats</a>
-            <a href="#" class="bg-gold text-black px-8 py-2.5 rounded-full text-[10px] font-black hover:opacity-90 transition">Contact Privé</a>
+        <div class="hidden md:flex space-x-10 text-[10px] uppercase tracking-[0.2em] font-bold text-gray-400">
+            <a href="#expertise" class="hover:text-gold-300 transition">Expertise</a>
+            <a href="#chiffres" class="hover:text-gold-300 transition">Chiffres Clés</a>
+            <a href="#" class="gold-gradient-bg text-black px-8 py-2.5 rounded-full text-[10px] font-black hover:opacity-90 transition shadow-lg shadow-gold-500/20">Contact Privé</a>
         </div>
     </nav>
 
-    <section class="relative min-h-[90vh] flex items-center pt-10">
-        <div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
+    <section class="relative min-h-[90vh] flex items-center pt-10 overflow-hidden">
+        <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+
+        <div class="container mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 max-w-7xl">
             
             <div class="space-y-10">
                 <div class="space-y-4">
                     <span class="text-xs font-bold tracking-[0.3em] uppercase text-gray-500">Freelance Media Buyer & Planner - Q3 2026</span>
-                    <h1 class="text-5xl md:text-7xl font-luxury text-white leading-[1.1]">
+                    <h1 class="text-5xl md:text-6xl font-luxury leading-[1.1]">
                         L'ingénierie média <br>
-                        au service de <span class="gold-gradient italic">votre croissance.</span>
+                        au service de <span class="gold-gradient-text italic">votre croissance.</span>
                     </h1>
                 </div>
                 
                 <p class="text-lg text-gray-400 font-light leading-relaxed max-w-xl">
-                    Malika Bennani accompagne les décideurs dans l'acquisition d'actifs publicitaires performants. Une approche mathématique et stratégique pour un ROAS garanti.
+                    Malika Bennani accompagne les décideurs dans l’acquisition d’actifs publicitaires performants. Une approche mathématique et stratégique pour un ROAS garanti.
                 </p>
 
                 <div class="flex flex-col sm:flex-row gap-6 pt-4">
-                    <a href="#" class="bg-gold text-black px-10 py-5 rounded-xl font-black text-sm uppercase tracking-widest text-center">
+                    <a href="#" class="gold-gradient-bg text-black px-10 py-5 rounded-xl font-black text-sm uppercase tracking-widest text-center shadow-lg shadow-gold-500/20 hover:scale-105 transition">
                         Stratégie Privée
                     </a>
-                    <a href="#" class="gold-border-button text-white px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest text-center">
+                    <a href="#" class="gold-border text-white px-10 py-5 rounded-xl font-bold text-sm uppercase tracking-widest text-center hover:bg-gold-500 hover:text-black transition">
                         Études de cas
                     </a>
                 </div>
 
-                <div class="pt-12 grid grid-cols-3 gap-8 border-t border-white/10 max-w-lg">
-                    <div>
-                        <p class="gold-gradient text-3xl font-black">+150M€</p>
+                <div class="pt-12 grid grid-cols-3 gap-8 border-t border-gold/10 max-w-lg">
+                    <div class="text-center md:text-left">
+                        <p class="gold-gradient-text text-4xl font-black">+150M€</p>
                         <p class="text-[10px] uppercase tracking-widest text-gray-500">Budget Géré</p>
                     </div>
-                    <div>
-                        <p class="gold-gradient text-3xl font-black">4.2</p>
+                    <div class="text-center md:text-left">
+                        <p class="gold-gradient-text text-4xl font-black">4.2</p>
                         <p class="text-[10px] uppercase tracking-widest text-gray-500">ROAS Moyen</p>
                     </div>
-                    <div>
-                        <p class="gold-gradient text-3xl font-black">12</p>
+                    <div class="text-center md:text-left">
+                        <p class="gold-gradient-text text-4xl font-black">12</p>
                         <p class="text-[10px] uppercase tracking-widest text-gray-500">Canaux Pilotés</p>
                     </div>
                 </div>
             </div>
             
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gold rounded-2xl opacity-20 blur-2xl group-hover:opacity-40 transition"></div>
-                <div class
+            <div class="relative flex justify-center items-center group">
+                <div class="absolute -inset-2 bg-gold-500 rounded-3xl opacity-10 blur-2xl group-hover:opacity-20 transition duration-700"></div>
+                
+                <div class="relative card-dark p-3 rounded-2xl shadow-2xl overflow-hidden hover-lift transition-all duration-500">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
+                         alt="Malika Bennani présenter des chiffres média" 
+                         class="rounded-xl w-full h-[600px] object-cover grayscale-[30%] group-hover:grayscale-0 transition duration-700">
+                </div>
+
+                <div class="absolute -bottom-8 -left-8 card-dark p-6 rounded-2xl shadow-3xl border border-gold-500/50 animate-pulse group-hover:animate-none group-hover:scale-110 transition-transform duration-300">
+                    <div class="flex items-center gap-4">
+                        <div class="bg-gold-500/10 p-3 rounded-lg text-gold-500"><i data-lucide="trending-up"></i></div>
+                        <div>
+                            <p class="text-white font-black text-2xl">+18%</p>
+                            <p class="text-[10px] text-gray-500 uppercase tracking-tighter">ROI Global Q3 2026</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="expertise" class="py-32 bg-dark-950 relative overflow-hidden">
+        <div class="absolute inset-x-0 bottom-0 h-px bg-gold/10"></div>
+        <div class="absolute inset-y-0 left-0 w-px bg-gold/10"></div>
+
+        <div class="container mx-auto px-8 max-w-7xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                
+                <div class="card-dark p-12 rounded-3xl space-y-6 hover:border-gold-500/60 transition hover-lift cursor-default group">
+                    <i data-lucide="calendar-days" class="w-10 h-10 text-gold-500 group-hover:scale-110 transition"></i>
+                    <h3 class="text-2xl font-luxury">Média Planning Stratégique</h3>
+                    <p class="text-gray-400 leading-relaxed font-light">Structure complète des calendriers de diffusion, sélection des inventaires premium et négociation des tarifs GRP/CPM pour une visibilité maximale.</p>
+                </div>
+
+                <div class="card-dark p-12 rounded-3xl space-y-6 hover:border-gold-500/60 transition hover-lift cursor-default group">
+                    <i data-lucide="shopping-cart" class="w-10 h-10 text-gold-500 group-hover:scale-110 transition"></i>
+                    <h3 class="text-2xl font-luxury">Achat Média & Trafic</h3>
+                    <p class="text-gray-400 leading-relaxed font-light">Achat programmatique et direct sur les plateformes leaders. Optimisation algorithmique quotidienne pour réduire le CPA et augmenter le volume de conversion.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gold/5 bg-dark-950 text-center relative z-10">
+        <p class="text-[10px] tracking-[0.4em] uppercase text-gray-600">
+            Malika Bennani - Expertise Média Confidentielle - Casablanca | Rabat - © 2026
+        </p>
+    </footer>
+
+    <script>
+        // Initialisation des icônes Lucide
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+
+              
           
 
         
